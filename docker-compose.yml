@@ -1,0 +1,18 @@
+# Optional: a ready-to-use MySQL server for the application.
+#   docker compose up -d      (start)
+#   docker compose down       (stop; data is kept in the "dental_mysql_data" volume)
+# The values match config.properties (user root / password "password").
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dental-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - dental_mysql_data:/var/lib/mysql
+
+volumes:
+  dental_mysql_data:

@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Dental Clinic",
+            "request": "launch",
+            "mainClass": "com.dentalclinic.Launcher"
+        }
+    ]
+}
